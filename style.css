@@ -1,0 +1,301 @@
+/* ===================== BODY & HEADER ===================== */
+body {
+  background: #c2185b;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+header {
+  background: #ffe4ec;
+  color: #880e4f;
+  text-align: center;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 28px;
+  width: 92%;
+  position: relative;
+}
+.dark-pink-text {
+  color: #c2185b;  /* dark pink */
+  font-weight: bold;
+}
+
+
+header h1 { font-size: 2.8rem; }
+header p { margin-top: 6px; font-size: 1.1rem; }
+
+
+/* ---------------- Header layout ---------------- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 92%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* Left / Right Boxes */
+.header-left, .header-right {
+  flex: 0 0 220px;  /* fixed small rectangle width */
+}
+
+/* Center Title */
+.header-center {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Boxes inside left/right */
+.holiday-box, .weather-box {
+  background: #c2185b;  /* dark pink */
+  color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  min-height: 140px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Inputs inside boxes */
+.holiday-box input, .weather-box input {
+  width: 90%;
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: none;
+  background: #ffd1dc;  /* light pink */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Buttons inside boxes */
+.holiday-box button, .weather-box button {
+  padding: 6px 12px;
+  margin: 6px 0;
+  background: #880e4f;  /* darker pink */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.holiday-box button:hover, .weather-box button:hover {
+  background: #a3002f;
+}
+
+/* Holiday list inside box */
+.holiday-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.holiday-box li {
+  background: #ffd1dc;
+  color: #880e4f;
+  padding: 4px 6px;
+  margin: 3px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Weather info */
+.weather-box div {
+  margin: 3px 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Responsive for small screens */
+@media (max-width: 1000px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-left, .header-right {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+/* ===================== TOP ROW ===================== */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  margin: 30px auto;
+  gap: 20px;
+}
+
+.box {
+  background: #ffffff;
+  color: #880e4f;
+  padding: 15px;
+  border-radius: 20px;
+  flex: 1;
+  min-height: 200px;
+}
+
+/* ===================== TIMER ===================== */
+#timer { font-size: 2.4rem; text-align: center; margin: 10px 0; }
+.timer-btns { text-align: center; }
+.timer-btns button {
+  background: #880e4f;
+  color:#fff;
+  border:none;
+  padding:8px 15px;
+  margin:5px;
+  border-radius:16px;
+  cursor:pointer;
+}
+.timer-btns button:hover { background: #c2185b; }
+
+/* ===================== SCHEDULE ===================== */
+.schedule-box select,
+.schedule-box input {
+  width: 100%;
+  padding:8px;
+  margin:6px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+.schedule-box .dark-input {
+  background: #ffc0cb;
+  border: none;
+}
+
+/* Confirm Plan Button */
+
+.confirm-btn {
+  width: 100%;
+  padding:10px;
+  margin-top:10px;
+  background:#c2185b;
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.confirm-btn:hover { background:#880e4f; transform: scale(1.05); }
+.timer-control-btns {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.timer-control-btns button {
+  background: #ff8fb1;      /* light pink */
+  color: #880e4f;           /* dark text */
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.timer-control-btns button:hover {
+  background: #ff6699;
+}
+
+/* ===================== TARGET LIST ===================== */
+#targetList, #finalTargetList { list-style:none; margin-top:10px; padding:0; }
+#targetList li, #finalTargetList li {
+  background:#ffe4ec;
+  color:#880e4f;
+  padding:6px 10px;
+  border-radius:10px;
+  margin:5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===================== EXERCISE GRID ===================== */
+#exerciseGrid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+  width:92%;
+  margin:0 auto 50px auto;
+}
+.exercise-card {
+  background:#ffd1dc;
+  border-radius:16px;
+  padding:10px;
+  text-align:center;
+  cursor:pointer;
+  transition: transform 0.3s;
+}
+.exercise-card:hover { transform: scale(1.05); }
+.exercise-card img {
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:12px;
+}
+.exercise-card h4 {
+  margin-top:8px;
+  color:#880e4f;
+  font-size:0.95rem;
+}
+.exercise-card p {
+  font-size:0.8rem;
+  color:#5c0030;
+}
+
+/* Add Button */
+.add-btn {
+  background: #880e4f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 6px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.add-btn:hover {
+  background: #c2185b;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===================== WHITE SECTIONS ===================== */
+.white-section {
+  background:#fff;
+  color:#880e4f;
+  width:92%;
+  margin:40px auto;
+  padding:30px;
+  border-radius:24px;
+  text-align:center;
+}
+.white-section h2 { margin-bottom:15px; }
+.youtube-links a,
+.blog-links a {
+  display:block;
+  margin:6px 0;
+  color:#c2185b;
+  text-decoration:none;
+  font-weight:600;
+}
+.youtube-links a:hover,
+.blog-links a:hover { text-decoration:underline; }
+
+/* ===================== MEDIA QUERIES ===================== */
+@media (max-width:1000px) {
+  #exerciseGrid { grid-template-columns:repeat(3,1fr); }
+  .top-row { flex-direction:column; }
+  .weather-box { position: relative; top: auto; right: auto; margin: 20px auto; width: 90%; }
+}
