@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitWise — Smart Fitness Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-left">
+        <!-- Holiday Box -->
+        <div class="box holiday-box">
+          <h4>🎉 Holidays in India</h4>
+          <button id="getHolidaysBtn">Show Holidays 📅</button>
+          <ul id="holidayList"></ul>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <h1 class="dark-pink-text">FitWise</h1>
+        <p class="dark-pink-text">
+          Plan exercises, track progress, and stay healthy!
+        </p>
+        <p class="dark-pink-text">आप स्वस्थ रह सकते हैं — Stay fit daily!</p>
+      </div>
+
+      <div class="header-right">
+        <!-- Weather Box -->
+        <div class="box weather-box">
+          <h4>🌍 Weather</h4>
+          <input
+            type="text"
+            id="weatherLocation"
+            placeholder="Country code (e.g., US)"
+          />
+          <button id="getWeatherBtn">Get Weather ☀️</button>
+          <div id="weatherCity"></div>
+          <div id="weatherTemp"></div>
+          <div id="weatherCondition"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ---------------- TOP ROW: Timer + Schedule + Target ---------------- -->
+    <div class="top-row">
+      <div class="box timer-box">
+        <h2>Focus Timer</h2>
+        <div id="timer">00:00</div>
+        <div class="timer-btns">
+          <button data-time="30">30 min</button>
+          <button data-time="60">60 min</button>
+          <button id="resetTimer" class="timer-btns">Reset ⏹️</button>
+        </div>
+        <div class="timer-control-btns">
+          <button id="pauseTimer">⏸️ Pause</button>
+          <button id="restartTimer">🔄 Restart</button>
+        </div>
+      </div>
+
+      <div class="box schedule-box">
+        <h2>Schedule</h2>
+        <label>Date</label>
+        <input type="date" id="scheduleDate" class="dark-input" />
+        <label>Session</label>
+        <select id="sessionSelect" class="dark-input">
+          <option value="">Select</option>
+          <option>Morning</option>
+          <option>Evening</option>
+        </select>
+        <h4>Click "Add" to schedule exercises:</h4>
+        <ul id="targetList"></ul>
+        <button id="confirmPlan" class="confirm-btn">Confirm Plan ✅</button>
+      </div>
+
+      <div class="box target-box">
+        <h2>🎯 Target</h2>
+        <p>Now you can see your daily list in this:</p>
+        <ul id="finalTargetList"></ul>
+      </div>
+    </div>
+
+    <!-- ---------------- EXERCISES GRID ---------------- -->
+    <section class="exercise-section">
+      <h2>Exercises / Yoga Poses</h2>
+      <div id="exerciseGrid"></div>
+    </section>
+
+    <!-- ---------------- WHITE SECTION: YOUTUBE ---------------- -->
+    <section class="white-section">
+      <h2>Popular Yoga YouTubers</h2>
+      <div class="youtube-links">
+        <a href="https://www.youtube.com/@yogawithadriene" target="_blank"
+          >Yoga With Adriene</a
+        >
+        <a href="https://www.youtube.com/@SarvaYogaStudio" target="_blank"
+          >Sarva Yoga</a
+        >
+        <a href="https://www.youtube.com/@BohoBeautiful" target="_blank"
+          >Boho Beautiful</a
+        >
+        <a href="https://www.youtube.com/@satvicmovement" target="_blank"
+          >Satvic Movement</a
+        >
+        <a href="https://www.youtube.com/@TheArtOfLiving" target="_blank"
+          >Art of Living</a
+        >
+      </div>
+    </section>
+
+    <!-- ---------------- WHITE SECTION: HEALTH ---------------- -->
+    <section class="white-section">
+      <h2>Why Avoid Soft Drinks & Junk Food?</h2>
+      <p>
+        Regular intake of soft drinks, packaged foods, and junk food increases
+        obesity, fatty liver disease, insulin resistance, and heart problems.
+        High sugar damages the liver silently over years.
+      </p>
+      <p style="margin-top: 10px">
+        Switch to water, fruits, home-cooked meals, and daily movement to
+        prevent lifestyle diseases early.
+      </p>
+
+      <div class="blog-links" style="margin-top: 15px">
+        <a
+          href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+          target="_blank"
+          >WHO – Obesity Facts</a
+        >
+        <a
+          href="https://www.healthline.com/nutrition/sugary-drinks"
+          target="_blank"
+          >Healthline – Sugary Drinks</a
+        >
+        <a href="https://liverfoundation.org" target="_blank"
+          >American Liver Foundation</a
+        >
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
